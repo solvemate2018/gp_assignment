@@ -1,0 +1,50 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  measurement-service:
+    build:
+      context: "C:\\Users\\georg\\Desktop\\University\\EASV\\EASV Second Semester\\\
+        Development of Large systems\\Development of Large systems Assignment\\GP\
+        \ assignment"
+      dockerfile: "MeasurementService/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/MeasurementService.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "measurementservice:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\georg\\.nuget\\packages:/home/app/.nuget/packages"
+    - "C:\\Users\\georg\\Desktop\\University\\EASV\\EASV Second Semester\\Development\
+      \ of Large systems\\Development of Large systems Assignment\\GP assignment\\\
+      MeasurementService:/app:rw"
+    - "C:\\Users\\georg\\Desktop\\University\\EASV\\EASV Second Semester\\Development\
+      \ of Large systems\\Development of Large systems Assignment\\GP assignment:/src:rw"
+    working_dir: "/app"
+  patient-service:
+    build:
+      context: "C:\\Users\\georg\\Desktop\\University\\EASV\\EASV Second Semester\\\
+        Development of Large systems\\Development of Large systems Assignment\\GP\
+        \ assignment"
+      dockerfile: "PatientService/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/PatientService.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "patientservice:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\georg\\.nuget\\packages:/home/app/.nuget/packages"
+    - "C:\\Users\\georg\\Desktop\\University\\EASV\\EASV Second Semester\\Development\
+      \ of Large systems\\Development of Large systems Assignment\\GP assignment\\\
+      PatientService:/app:rw"
+    - "C:\\Users\\georg\\Desktop\\University\\EASV\\EASV Second Semester\\Development\
+      \ of Large systems\\Development of Large systems Assignment\\GP assignment:/src:rw"
+    working_dir: "/app"
