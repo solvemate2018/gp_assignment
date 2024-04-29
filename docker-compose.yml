@@ -3,6 +3,7 @@
     build:
       context: DoctorUI
       dockerfile: DoctorUI/Dockerfile
+    image: geor2020/doctor-ui:latest
     ports:
       - 8060:80
 
@@ -10,6 +11,7 @@
     build:
       context: PatientUI
       dockerfile: PatientUI/Dockerfile
+    image: geor2020/patient-ui:latest
     ports:
       - 8070:80
   
@@ -17,6 +19,7 @@
     build:
       context: .
       dockerfile: MeasurementService/Dockerfile
+    image: geor2020/measurement-service:latest
     ports:
       - 8080:8080
       
@@ -24,6 +27,7 @@
     build:
       context: .
       dockerfile: PatientService/Dockerfile
+    image: geor2020/patient-service:latest
     ports:
       - 8090:8080
       
